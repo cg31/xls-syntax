@@ -1,0 +1,26 @@
+{
+    "name": "XLS-extension",
+    "displayName": "XLS_extension",
+    "description": "Syntax Highlighter for XLS DSL",
+    "publisher": "cg31",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.35.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "x",
+            "aliases": ["x"],
+            "extensions": [".x"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "x",
+            "scopeName": "source.x",
+            "path": "./syntaxes/x.tmLanguage.json"
+        }]
+    }
+}

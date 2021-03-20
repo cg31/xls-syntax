@@ -1,0 +1,89 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "x",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.x",
+					"match": "\\b(?i)(APFloat|import|if|else)\\b"
+				},
+				{
+					"name": "keyword.other.x",
+					"match": "\\b(?i)(import|type|pub|fn|let)\\b"
+				}
+			]
+			},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.x",
+					"begin": "//",
+					"end": "\n"
+				},
+				{
+					"name":"comment.block.x",
+					"begin": "\/[*]",
+					"end": "[*](\/)"
+				}
+			]
+		},
+		"strings":{
+			"patterns": [
+				{
+					"name":"string.quoted.single.x",
+					"begin": "'",
+					"end": "'"
+				},
+				{
+					"name":"string.quoted.double.x",
+					"begin": "\"",
+					"end": "\""
+				}
+			]
+		},
+		"variables":{
+			"patterns": [
+				{
+					"name": "variable.language.x"	,
+					"match": "\\b(?i)(u2|u32|bool|boolean)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.character",
+					"match": "(<|>|=|!)"
+				},
+				{
+					"name": "constant.language",
+					"match": "\\b(?i)(as|true|false)\\b"
+				},
+				{
+					"name": "constant.numeric",
+					"match": "[0-9]"
+				}
+			]
+		}
+
+	},
+	"scopeName": "source.x"
+}
